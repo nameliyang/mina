@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ly.mina.quickstart.UIController">
+    <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="tab1">
+               <content>
+                    <FlowPane alignment="CENTER" hgap="10.0" vgap="10.0">
+                        <children>
+                        <Region prefHeight="23.0" prefWidth="156.0" />
+                            <Button fx:id="startBtn" mnemonicParsing="false" onAction="#startServer" text="start" />
+                            <Button fx:id="disposeBtn" mnemonicParsing="false" onAction="#disposeServer" text="disposeBtn" />
+                            <Button fx:id="wakeupBtn" mnemonicParsing="false" onAction="#wakeupBtn" text="wakeupBtn" />
+                        </children>
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                    </FlowPane>
+               </content>
+               <graphic>
+                  <FlowPane hgap="10.0" prefHeight="170.0" prefWidth="431.0" vgap="10.0">
+                     <children>
+                        <TextArea fx:id="broadcastTextArea" prefHeight="192.0" prefWidth="267.0" promptText="广播信息" />
+                        <VBox alignment="CENTER" prefHeight="198.0" prefWidth="105.0">
+                           <children>
+                              <Button fx:id="broadcastBtn" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendBroadcast" prefHeight="23.0" prefWidth="123.0" text="SendBroadcast " />
+                              <Region prefHeight="59.0" prefWidth="123.0" />
+                              <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" />
+                           </children>
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </FlowPane>
+               </graphic>
+            </Tab>
+          <Tab text="tab2" />
+        </tabs>
+      </TabPane>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+    </padding>
+</Pane>
